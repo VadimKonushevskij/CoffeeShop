@@ -1,0 +1,1171 @@
+@font-face {
+  font-family: "Inter";
+  src: url(./fonts/Inter_18pt-Regular.woff2) format(woff2);
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url(./fonts/Inter_18pt-Bold.woff2) format(woff2);
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Urbanist";
+  src: url(./fonts/Urbanist-Medium.woff2) format(woff2);
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Urbanist";
+  src: url(./fonts/Urbanist-SemiBold.woff2) format(woff2);
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Righteous";
+  src: url(./fonts/Righteous-Regular.woff2) format(woff2);
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+button {
+  border: none;
+}
+
+.wrapper {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+}
+.container > section:not(:last-child) {
+  margin-block: 140px;
+}
+
+.background {
+  background-image: url(./img/bg.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-color: #14110e;
+}
+
+/* header */
+
+.header {
+  background-color: #1c1814;
+  color: #fff;
+  height: 125px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 300px;
+}
+
+.nav-left-list,
+.nav-right-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-left-list {
+  width: 420px;
+}
+
+.nav-right-list {
+  width: 420px;
+}
+
+.is-active {
+  color: #c99e71;
+  font-weight: 700;
+}
+
+header a {
+  transition: 0.2s;
+}
+
+@media (min-width: 1024px) {
+  header a:hover {
+    color: gray;
+  }
+}
+
+/* main page */
+
+/* 1st section - banner */
+
+.banner {
+  margin-top: 0 !important;
+  margin-bottom: 300px !important;
+  color: #fff;
+  position: relative;
+}
+
+.banner-body {
+  width: 530px;
+  padding-top: 150px;
+}
+
+.banner-body h2 {
+  font-family: "Righteous";
+  font-weight: 400;
+  font-size: 72px;
+  line-height: 1.3;
+}
+
+.banner-body p {
+  font-family: "Urbanist";
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.8;
+  opacity: 0.8;
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+.banner-body button {
+  background-color: #c99e71;
+  width: 200px;
+  height: 70px;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 18px;
+  transition: 0.2s;
+}
+
+.play-btn {
+  width: 100px;
+  height: 120px;
+  position: absolute;
+  top: 400px;
+  left: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.play-btn button {
+  width: 70px;
+  aspect-ratio: 1;
+  background: transparent;
+  background-image: url(./img/triangle.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  border: #fff 2px solid;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.play-btn p {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+@media (min-width: 1024px) {
+  .banner-body button:hover {
+    background-color: #6e563e;
+  }
+}
+
+.play-btn:hover,
+.play-btn button:hover {
+  cursor: pointer;
+}
+
+/* 2nd section - process  */
+
+.three-steps {
+  margin-top: 310px;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.three-steps .card p {
+  font-family: "Righteous";
+  font-weight: 400;
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+.three-steps .card p span {
+  color: #c99e71;
+  margin-right: 12px;
+}
+
+/* 3rd section - history */
+
+.our-history {
+  display: grid;
+  grid-template-columns: 298px 298px 510px;
+  grid-template-rows: 334px 301px;
+  column-gap: 32px;
+}
+
+.our-history .left img:is(:last-child) {
+  margin-top: 28px;
+  grid-area: 1 1 2 3;
+}
+
+.our-history .body {
+  grid-area: 1 / 3 / 3 / 4;
+  background-color: #1c1814;
+  padding: 120px 56px 147px 56px;
+}
+
+.our-history .body span {
+  color: #c99e71;
+  font-family: "Urbanist";
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.our-history .body h2 {
+  color: #fff;
+  font-family: "Righteous";
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 1.3;
+  margin-top: 12px;
+  margin-bottom: 36px;
+}
+
+.our-history .body p {
+  color: #fff;
+  font-family: "Urbanist";
+  font-weight: 500;
+  font-size: 16px;
+  opacity: 60%;
+  line-height: 1.8;
+}
+
+/* 4th section - popular  */
+
+.popular-product {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popular-product > span {
+  color: #c99e71;
+  font-family: "Urbanist";
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.popular-product h2 {
+  font-family: "Righteous";
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 1.3;
+  margin-top: 12px;
+  margin-bottom: 56px;
+}
+
+.popular-product .showcase {
+  display: flex;
+  column-gap: 36px;
+  margin-bottom: 56px;
+}
+
+.popular-product .showcase .card {
+  background-color: #121315;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 48px 48px 36px;
+}
+
+.popular-product .showcase .card > img {
+  margin-bottom: 36px;
+}
+
+.popular-product .showcase .card > span {
+  font-family: "Righteous";
+  font-weight: 400;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.popular-product .showcase .card > button {
+  margin-top: 38px;
+  margin-bottom: 36px;
+  background-color: #c99e71;
+  color: #fff;
+  font-family: "Urbanist";
+  font-weight: 600;
+  font-size: 18px;
+  padding-inline: 20px;
+  padding-block: 13px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  transition: 0.2s;
+}
+
+.popular-product .showcase .card .rate {
+  display: flex;
+  gap: 13px;
+  color: #c99e71;
+  font-family: "Urbanist";
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.popular-product .showcase .card .rate .stars {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.popular-product .showcase .card > p {
+  font-family: "Urbanist";
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.popular-product .showcase .card > p span:is(:first-child) {
+  color: #c99e71;
+}
+
+.popular-product .showcase .card > p span:is(:last-child) {
+  position: relative;
+}
+
+.popular-product .showcase .card > p span:is(:last-child)::after {
+  content: "";
+  z-index: 1;
+  width: 40px;
+  border-bottom: #fff 0.5px solid;
+  top: 10px;
+  left: 0px;
+  position: absolute;
+}
+
+.popular-product > button {
+  width: 252px;
+  height: 62px;
+  background-color: #c99e71;
+  color: #fff;
+  font-family: "Inter";
+  font-weight: 800;
+  font-size: 18px;
+  text-transform: uppercase;
+  transition: 0.2s;
+}
+
+@media (min-width: 1024px) {
+  .popular-product button:hover,
+  .popular-product .showcase .card button:hover {
+    background-color: #6e563e;
+  }
+}
+
+/* 5th section - coffee machine  */
+
+.coffee-machine {
+  background-color: #1c1814;
+  padding: 85px 89px 85px 169px;
+  display: flex;
+  gap: 160px;
+  color: #fff;
+}
+
+.coffee-machine img {
+  width: 226px;
+  height: 359px;
+}
+
+.coffee-machine .body h2 {
+  font-family: "Righteous";
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 1.3;
+}
+
+.coffee-machine .body p {
+  margin-block: 36px;
+  font-family: "Urbanist";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.8;
+  opacity: 70%;
+}
+
+.coffee-machine .body button {
+  width: 215px;
+  height: 62px;
+  background-color: #c99e71;
+  color: #fff;
+  font-family: "Inter";
+  font-weight: 800;
+  font-size: 18px;
+  text-transform: uppercase;
+  transition: 0.2s;
+}
+
+@media (min-width: 1024px) {
+  .coffee-machine .body button:hover {
+    background-color: #6e563e;
+  }
+}
+
+/* 6th section - menu  */
+
+.menu {
+  color: #fff;
+  justify-items: center;
+}
+
+.menu > span {
+  color: #c99e71;
+  font-family: "Urbanist";
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.menu > h2 {
+  margin-top: 12px;
+  margin-bottom: 56px;
+  font-family: "Righteous";
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 1.3;
+}
+
+.menu ul {
+  display: grid;
+  gap: 38px;
+  grid-template-columns: repeat(2, 566px);
+  grid-template-rows: repeat(4, 120px);
+}
+
+.menu ul li {
+  display: flex;
+  border: #32323d 1px solid;
+  padding: 24px;
+  align-items: center;
+}
+
+.menu ul li span {
+  color: #c99e71;
+  font-family: "Urbanist";
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.menu ul li span:not(:last-child) {
+  color: #fff;
+  font-family: "Righteous";
+  font-weight: 400;
+  font-size: 24px;
+  padding-left: 20px;
+  padding-right: 117px;
+}
+
+/* 7th section - reviews  */
+
+.reviews {
+  justify-items: center;
+  color: #fff;
+}
+
+.reviews > span {
+  color: #c99e71;
+  font-family: "Urbanist";
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.reviews h2 {
+  font-family: "Righteous";
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 1.3;
+  margin-top: 12px;
+  margin-bottom: 56px;
+}
+
+.reviews .panel {
+  display: flex;
+  gap: 40px;
+}
+
+.reviews .panel .card {
+  background-color: #1c1814;
+  padding: 40px;
+}
+
+.reviews .panel .card .body {
+  display: flex;
+  gap: 24px;
+}
+
+.reviews .panel .card .body img {
+  width: 129px;
+  height: 149px;
+}
+
+.reviews .panel .card .body p {
+  font-family: "Urbanist";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.8;
+  opacity: 70%;
+  max-height: 200px;
+  overflow-x: hidden;
+}
+
+.reviews .panel .card > span {
+  display: block;
+  font-family: "Urbanist";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2;
+  margin-top: 28px;
+  margin-bottom: 4px;
+}
+
+.reviews .panel .card .underbody {
+  display: flex;
+  justify-content: space-between;
+}
+
+.reviews .panel .card .underbody > span {
+  font-family: "Urbanist";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.8;
+  opacity: 40%;
+}
+
+.reviews .bottom {
+  margin-top: 36px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: #c99e71;
+  font-family: "Urbanist";
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.35;
+}
+
+.reviews .bottom .left .line {
+  margin-top: 20px;
+  background-color: #fffffe1a;
+  height: 4px;
+  width: 120px;
+  border-radius: 3px;
+  position: relative;
+}
+
+.reviews .bottom .left .line::before {
+  content: "";
+  position: absolute;
+  background-color: #c99e71;
+  height: 4px;
+  width: 50px;
+  border-radius: 3px;
+}
+
+.reviews .bottom .right button {
+  width: 56px;
+  aspect-ratio: 1;
+  background-color: transparent;
+}
+
+.reviews .bottom .right .is-active {
+  background-color: #c99e71;
+  border-radius: 50%;
+  margin-left: 16px;
+  transition: 0.2s;
+}
+
+@media (min-width: 1024px) {
+  .reviews .bottom .right .is-active:hover {
+    background-color: #6e563e;
+  }
+}
+
+/* 8th section - map & booking  */
+
+.reservation {
+  display: flex;
+}
+
+.reservation img {
+  width: 50%;
+  height: auto;
+}
+
+.reservation .booking {
+  background-color: #1c1814;
+  width: 50%;
+  justify-items: center;
+  padding: 72px 48px;
+  border: none;
+}
+
+.reservation .booking span {
+  color: #c99e71;
+  font-family: "Urbanist";
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.reservation .booking h2 {
+  color: #fff;
+  font-family: "Righteous";
+  font-weight: 400;
+  font-size: 48px;
+  margin-top: 12px;
+  margin-bottom: 56px;
+}
+
+.reservation .booking form {
+  background-color: #14110e;
+  width: 489px;
+  height: 64px;
+}
+
+.reservation .booking form:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.reservation .booking form select {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  appearance: none;
+  color: #fff;
+  padding: 16px 20px;
+  font-family: "Urbanist";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.8;
+  opacity: 80%;
+}
+
+.reservation .booking form select option {
+  background-color: #14110e;
+}
+
+.reservation .booking form input {
+  padding: 16px 20px;
+  width: 92%;
+  height: 51%;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-family: "Urbanist";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.8;
+  opacity: 80%;
+  appearance: none;
+}
+
+input::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+.reservation .booking button {
+  width: 202px;
+  height: 62px;
+  background-color: #c99e71;
+  color: #fff;
+  font-family: "Inter";
+  font-weight: 800;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-top: 56px;
+  transition: 0.2s;
+}
+
+@media (min-width: 1024px) {
+  .reservation .booking button:hover {
+    background-color: #6e563e;
+  }
+}
+
+/* 9th section - latest news  */
+
+.news {
+  color: #fff;
+  justify-items: center;
+}
+
+.news > span {
+  font-family: "Urbanist";
+  font-weight: 600;
+  font-size: 18px;
+  color: #c99e71;
+}
+
+.news h2 {
+  font-family: "Righteous";
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 1.3;
+  margin-top: 12px;
+  margin-bottom: 56px;
+}
+
+.news .showcase {
+  display: flex;
+  gap: 36px;
+}
+
+.news .showcase .card {
+  background-color: #1c1814;
+  height: 528px;
+}
+
+.news .showcase .info {
+  padding: 20px 24px 24px;
+}
+
+.news .showcase .info .by-and-date {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Urbanist";
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.news .showcase .info .by-and-date span span {
+  color: #c99e71;
+}
+
+.news .showcase .info > span {
+  font-family: "Righteous";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.5;
+  display: block;
+  margin-top: 16px;
+  margin-bottom: 32px;
+}
+
+.news .showcase .info button {
+  display: flex;
+  gap: 8px;
+  width: 110px;
+  height: 24px;
+  background-color: transparent;
+  color: #c99e71;
+  font-family: "Urbanist";
+  font-weight: 500;
+  font-size: 16px;
+  align-items: center;
+  transition: 0.2s;
+}
+
+@media (min-width: 1024px) {
+  .news .showcase .info button:hover {
+    color: #6e563e;
+    cursor: pointer;
+  }
+}
+
+/* footer  */
+
+footer {
+  background-color: #14110e;
+  padding-top: 140px;
+  color: #fff;
+  font-family: "Urbanist";
+  font-weight: 500;
+}
+
+footer .body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 78px;
+}
+
+footer .body nav ul {
+  display: flex;
+  gap: 40px;
+  margin-left: 36px;
+  margin-right: 82px;
+  font-size: 20px;
+}
+
+footer .body nav ul a {
+  transition: 0.2s;
+}
+
+footer .body .email {
+  display: flex;
+  align-items: center;
+  gap: 30%;
+  box-sizing: border-box;
+  width: 328px;
+  height: 72px;
+  border-radius: 36px;
+  background-color: #1c1814;
+  padding: 12px 12px 12px 28px;
+}
+
+footer .body .email input {
+  background: transparent;
+  border: none;
+  color: #fff;
+}
+
+footer .body .email input::placeholder {
+  color: #fff;
+  font-family: "Urbanist";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.8;
+  opacity: 70%;
+}
+
+footer .body .email button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #c99e71;
+  width: 48px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  box-shadow: 0px 5px 80px 3px #c99e71;
+  transition: 0.2s;
+}
+
+footer .copyright {
+  background-color: #1c1814;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+@media (min-width: 1024px) {
+  footer .body nav ul li a:hover {
+    color: gray;
+  }
+}
+
+@media (min-width: 1024px) {
+  footer .body .email button:hover {
+    background-color: #6e563e;
+  }
+}
+/* media-requests */
+
+@media (max-width: 1600px) {
+  .nav {
+    padding: 0 50px;
+  }
+
+  .play-btn {
+    right: 150px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .banner-body {
+    padding-left: 50px;
+  }
+
+  .play-btn {
+    left: 900px;
+  }
+
+  .three-steps {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 250px;
+  }
+
+  .three-steps .card {
+    padding: 50px;
+  }
+
+  .our-history {
+    grid-template-columns: 298px 0px 510px;
+    justify-content: space-around;
+    padding-inline: 50px;
+  }
+
+  .our-history .left {
+    display: none;
+  }
+
+  .popular-product .showcase {
+    margin-inline: 50px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 30px;
+  }
+
+  .coffee-machine {
+    flex-direction: column-reverse;
+    margin-inline: 50px;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .coffee-machine {
+    padding: 50px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .menu ul {
+    grid-template-columns: 1fr;
+  }
+
+  .reviews .panel {
+    flex-direction: column;
+    width: 80%;
+    margin-inline: auto;
+  }
+
+  .reviews .bottom {
+    max-width: 70%;
+  }
+
+  .reservation {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .reservation img {
+    margin-top: 50px;
+    width: 80%;
+  }
+  .news .showcase {
+    margin-inline: 50px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  footer {
+    padding-top: 30px;
+  }
+
+  footer .body {
+    gap: 20%;
+    margin-bottom: 30px;
+  }
+
+  footer .body nav {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .nav-left-list,
+  .nav-right-list {
+    width: 300px;
+  }
+
+  .play-btn {
+    left: 650px;
+  }
+
+  .our-history {
+    grid-template-columns: 0px 0px 510px;
+    justify-content: center;
+    gap: 0;
+    margin-top: 100px;
+  }
+
+  .our-history > img {
+    display: none;
+  }
+
+  .coffee-machine .body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 800px) {
+  .nav {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .nav > svg,
+  div {
+    justify-self: center;
+  }
+
+  .nav > svg {
+    grid-row: 1 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+
+  .banner-body {
+    padding-left: 20px;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 70%;
+    margin-bottom: 310px;
+  }
+
+  .banner-body h2 {
+    font-size: 50px;
+  }
+
+  .banner-body p {
+    font-size: 18px;
+  }
+
+  .play-btn {
+    display: none;
+  }
+
+  .three-steps .card {
+    padding: 20px;
+  }
+
+  .reviews .card .underbody {
+    width: 100%;
+  }
+
+  .reservation .booking h2 {
+    text-align: center;
+  }
+
+  .reservation .booking form {
+    width: 90%;
+  }
+
+  .news .showcase .card .info .by-and-date {
+    width: 100%;
+  }
+
+  footer .body {
+    gap: 20px;
+  }
+
+  footer .copyright {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    height: 90px;
+    font-size: 16px;
+  }
+
+  .nav {
+    padding: 0 10px;
+  }
+
+  .nav-left-list,
+  .nav-right-list {
+    width: 250px;
+  }
+
+  .banner-body h2 {
+    font-size: 40px;
+  }
+
+  .banner-body p {
+    font-size: 16px;
+  }
+
+  .banner-body button {
+    background-color: #c99e71;
+    width: 200px;
+    height: 70px;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 18px;
+    transition: 0.2s;
+  }
+  .our-history {
+    grid-template-columns: 0px 0px 350px;
+    grid-template-rows: 500px 0px;
+  }
+  .our-history .body {
+    padding: 20px 20px;
+  }
+  .popular-product {
+    padding: 20px;
+  }
+
+  .menu {
+    padding-inline: 20px;
+  }
+
+  .menu h2 {
+    text-align: center;
+  }
+
+  .menu ul li span:not(:last-child) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .reviews h2 {
+    text-align: center;
+  }
+}
